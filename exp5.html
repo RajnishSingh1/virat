@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+
+    body{
+      align-content: center;
+      margin-left: 350px;
+      
+    }
+    h1{
+      
+      font-family: sans-serif;
+      
+    }
+    button{
+      border: none;
+      
+      padding: 10px 15px;
+      width: 100px;
+      text-align: center;
+      margin-top: 20px;
+      margin-left: 20px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 25px;
+      width: 200px;
+    }
+    th,td{
+      padding: 5px;
+      text-align: center;
+    }
+    table{
+      border-collapse: collapse;
+      /* width: 80%; */
+      height: 200px;
+      background-color: #ccc;
+      
+    }
+    .virat,.dhoni{
+      display: flex;
+      
+    }
+    .container1{
+      margin-right: 50px;
+    }
+    /* .container1,.container2{
+     
+
+    } */
+    .table2{
+      width: 600px;
+    }
+    .first,.second{
+      display: flex;
+
+    }
+   
+  </style>
+  <title>Document</title>
+</head>
+<body>
+  <h1>Click on player name to see their stats</h1>
+  <div class="first">
+    <img src="virat-kohli.webp" alt="">
+    <button onclick=" virat() ">Virat Kohli</button>
+  </div>
+  <div class="virat"></div>
+  <div class="second">
+    <img src="ms-dhoni.webp" alt="">
+  <button onclick=" mdhoni(); ">M.S. Dhoni</button>
+</div>
+  <div class="dhoni"></div>
+  
+
+  <script>
+  let kohli = document.querySelector('.virat')
+  const dhoni = document.querySelector('.dhoni')
+  const viratTable  = `
+
+    <div class="container1">
+      <h3>Personal Information</h3>
+      <table class = "table1">
+          <tr>
+            <th>Born</th>
+            <td>Nov 05,1988(34 years)</td> 
+          </tr>
+          <tr>
+            <th>Birht Place</th>
+            <td>Delhi</td> 
+          </tr>
+          <tr>
+            <th>Height</th>
+            <td>5 ft 9 in</td> 
+          </tr>
+          <tr>
+            <th>Role</th>
+            <td>Batsman</td> 
+          </tr>
+      </table>
+    </div>
+    
+    <div class="container2">
+      <h3>Batting Career Summary</h3>
+     <table class="table2">
+       <thead>
+       <tr>
+          <th>format</th>
+          <th>M</th>
+          <th>Inn</th>
+          <th>Runs</th>
+          <th>Avg</th>
+          <th>SR</th>
+          <th>100</th>
+          <th>50</th>
+       </tr>
+      </thead>
+          <tbody>
+          <tr>
+              <th>Test</th>
+              <td>108</td>
+              <td>183</td>
+              <td>8416</td>
+              <td>48.93</td>
+              <td>55.33</td>
+              <td>28</td>
+              <td>28</td>
+            </tr>
+            <tr>
+              <th>ODI</th>
+              <td>274</td>
+              <td>265</td>
+              <td>12898</td>
+              <td>57.3</td>
+              <td>93.6</td>
+              <td>46</td>
+              <td>65</td>
+            </tr>
+            <tr>
+              <th>T20I</th>
+              <td>115</td>
+              <td>107</td>
+              <td>4008</td>
+              <td>52.7</td>
+              <td>138.0</td>
+              <td>1</td>
+              <td>37</td>
+            </tr>
+            </tbody>
+      </table>  
+      </div>         
+  `
+
+  const DhoniTable = `
+      <div class="container1">
+          <h3>Personal Information</h3>
+            <table class = "table1">
+                <tr>
+                  <th>Born</th>
+                  <td>Jul 07,1981(41 years)</td> 
+                </tr>
+                <tr>
+                  <th>Birht Place</th>
+                  <td>Bihar</td>
+                </tr>
+                <tr>
+                  <th>Height</th>
+                  <td>5 ft 11 in</td> 
+                </tr>
+                <tr>
+                  <th>Role</th>
+                  <td>WK-Batsman</td> 
+                </tr>
+          </table>
+      </div>
+      <div class="container2">
+        <h3>Batting Career Summary</h3>
+          <table class="table2">
+                <thead>
+                  <tr>
+                      <th>format</th>
+                      <th>M</th>
+                      <th>Inn</th>
+                      <th>Runs</th>
+                      <th>Avg</th>
+                      <th>SR</th>
+                      <th>100</th>
+                      <th>50</th>
+                  </tr>
+                </thead>
+            <tbody>
+            <tr>
+                <th>Test</th>
+                <td>90</td>
+                <td>144</td>
+                <td>4876</td>
+                <td>38.1</td>
+                <td>59.1</td>
+                <td>6</td>
+                <td>33</td>
+            </tr>
+            <tr>
+                <th>ODI</th>
+                <td>350</td>
+                <td>297</td>
+                <td>10773</td>
+                <td>50.6</td>
+                <td>87.6</td>
+                <td>10</td>
+                <td>73</td>
+            </tr>
+            <tr>
+                <th>T20I</th>
+                <td>98</td>
+                <td>85</td>
+                <td>1617</td>
+                <td>37.6</td>
+                <td>126.1</td>
+                <td>0</td>
+                <td>24</td>
+            </tr>
+          </tbody>
+        </table>  
+      </div>         
+  `
+  console.log(viratTable)
+  function virat(){
+    kohli.innerHTML = viratTable
+  }
+   function mdhoni(){
+      dhoni.innerHTML = DhoniTable
+   }
+  </script>
+</body>
+</html>
